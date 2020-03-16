@@ -62,10 +62,7 @@ Feel free to modify folder structure as you see fit.
 - [Player Images](https://img.mlbstatic.com/mlb-photos/image/upload/images/headshots/current/60x60/543294@3x.png) - replace with correct player ID for player’s image
 - Questions / Comments? Feel free to email manuel@simplebet.io
 
-
-
-
-
+## Running the project
 Environment Configuration:
 1. The development IDE of this project is Android Studio 3.1.3, JRE 1.8.0_152
 2. The development flutter environment is:
@@ -79,12 +76,12 @@ Project execution on simulators:
 1. Open the project in Android Studio -> simple_flutter_hiring-master/pubspec.yaml -> Packages get.
 2. Choose a simulator and run the project, a home page titled "Simple Flutter Home Page" shows. Clicking on the RaisedButton "See schedule" is supposed to direct users to the list of game results (Home and Team names, logos and final scores) today called TODAY'S GAMES.
 
-For testing purpose (some dates don't have games), the testDate used is 03/13/2019, changing testDate in schedule_screen.dart line 22 into formattedNow from line 21 dynamically sets the date to be today's date.
+    For testing purpose (some dates don't have games), the testDate used is 03/13/2019, changing testDate in schedule_screen.dart line 22 into formattedNow from line 21 dynamically sets the date to be today's date.
 
-2. In schedule screen, clicking on any game card directs users to the Detail screen dynamic titled [homeTeamNameShort] @ [awayTeamNameShort]. Detail screen displays the game result, score section, line score section and team/player game stats section including player image, atBats, runs, hits, rbi, inningsPitched, strikeOuts.
+3. In schedule screen, clicking on any game card directs users to the Detail screen dynamic titled [homeTeamNameShort] @ [awayTeamNameShort]. Detail screen displays the game result, score section, line score section and team/player game stats section including toggle per team for player image, atBats, runs, hits, rbi, inningsPitched, strikeOuts.
 
 
-To be improved:
+## To be improved:
 1. The existing data models are based on inner dictionaries of the raw json response. If given more time, from the perspective of architecture, I would think of an idea to incorporate raw json parsing in api_resource.dart and return generic data model to outside. I'll try to create more data models for parsing the raw json file, then add one more input arguments into services/api_resource.dart's buildFuture() function - a Generic Model, outside can directly access the data model decoded from raw json in api_resource.
 
 2. Implement the network cache for api_resource and define a cache expiration after which api_resource calls for the latest data.

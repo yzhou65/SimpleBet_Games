@@ -12,7 +12,7 @@ class _TeamInfoColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final teamLogoUrl = teamLogoBaseUrl + (teamType == TeamType.home ? game.homeTeamId.toString() : game.awayTeamId.toString()) + ".svg";
-    final teamNameShort = teamType == TeamType.away ? game.homeTeamNameShort : game.awayTeamNameShort;
+    final teamNameShort = teamType == TeamType.home ? game.homeTeamNameShort : game.awayTeamNameShort;
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
