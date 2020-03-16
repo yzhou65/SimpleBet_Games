@@ -170,13 +170,13 @@ class PlayerStatsRow extends StatelessWidget {
         children: <Widget>[
           GameText(title, isBold: true, scale: 1.0,),
           Spacer(),
-          SizedBox(width: playerStatTextSpace + 10, child: GameText(stats1)),
+          SizedBox(width: playerStatTextSpace + 10, child: GameText(stats1, isBold: true,)),
           SizedBox(width: playerStatTextSpace - 8 ,),
-          SizedBox(width: playerStatTextSpace, child: GameText(stats2)),
+          SizedBox(width: playerStatTextSpace, child: GameText(stats2, isBold: true,)),
           SizedBox(width: playerStatTextSpace - 8,),
-          SizedBox(width: playerStatTextSpace, child: GameText(stats3)),
+          SizedBox(width: playerStatTextSpace, child: GameText(stats3, isBold: true,)),
           SizedBox(width: playerStatTextSpace - 8,),
-          SizedBox(width: playerStatTextSpace + 10, child: GameText(stats4,)),
+          SizedBox(width: playerStatTextSpace + 10, child: GameText(stats4, isBold: true,)),
         ],
       ),
     );
