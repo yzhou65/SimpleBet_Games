@@ -32,6 +32,8 @@ class _TeamInfoColumn extends StatelessWidget {
   }
 }
 
+
+/// Card info of a game's home/away team logos, scores
 class GameItem extends StatelessWidget {
   final GameModel game;
   const GameItem({Key key, this.game}) : super(key: key);
@@ -93,6 +95,7 @@ class GameText extends StatelessWidget {
 }
 
 
+/// Detail Row for a player's stats
 class PlayerItem extends StatelessWidget {
   final PlayerModel player;
   const PlayerItem({Key key, @required this.player}) : super(key: key);
@@ -145,6 +148,7 @@ class PlayerStatsRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Player stats rows
     if(title == null) {
       return Row(
         textDirection: TextDirection.ltr,
@@ -160,6 +164,7 @@ class PlayerStatsRow extends StatelessWidget {
       );
     }
 
+    // Hitter, pitcher header or Team stats
     return Container(
       padding: EdgeInsets.only(top: playerStatTextSpace - 10, bottom: playerStatTextSpace - 10, left: imageWidth),
       decoration: BoxDecoration(

@@ -34,6 +34,7 @@ class _DetailScreenState extends State<DetailScreen> {
 }
 
 
+/// Grid view for both teams' inning, hits, runs, hits and errors
 class _ScoreGridView extends StatelessWidget {
   final GameModel game;
   const _ScoreGridView({Key key, this.game}) : super(key: key);
@@ -73,6 +74,7 @@ class _ScoreGridView extends StatelessWidget {
     );
   }
 
+  /// Get the result for each grid
   List<GameText> _getLineScoreResultTexts(List<InningModel> innings, LineScoreModel score, GameModel game) {
     int inningLength = innings.length;
     int rows = 3;
@@ -135,6 +137,7 @@ class _ScoreGridView extends StatelessWidget {
 }
 
 
+/// Toggle per team for additional batter and pitcher stats
 class _ScorePageView extends StatefulWidget {
   final GameModel game;
   const _ScorePageView({Key key, this.game}) : super(key: key);
@@ -179,6 +182,7 @@ class _ScorePageState extends State<_ScorePageView> {
 }
 
 
+/// Container for hitting and pitching stats listViews
 class _BoxScoreColumnView extends StatelessWidget {
   final TeamType team;
   final GameModel game;
